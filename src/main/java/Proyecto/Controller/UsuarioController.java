@@ -82,9 +82,9 @@ public class UsuarioController {
 	
 	
 	
-	@GetMapping("/pagi")
+	@GetMapping("/principal")
 	public String newpag() {
-		return "paginanueva";
+		return "index";
 	}
 	
 	
