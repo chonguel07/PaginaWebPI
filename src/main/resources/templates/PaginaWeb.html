@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minium-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Pagina Denuncia</title>
+</head>
+<body >
+	<header>
+		<div class="contenedor">				
+			<h1>"Pagina Web de Denuncia"</h1>
+			
+		</div>
+
+	</header>
+	
+	<main>
+<br><br><br>
+
+		<section id="banner">
+		<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div th:switch="${usuario.rol}"> 
+		  <p th:case="'Administrador'" class="navbar-brand">BIENVENIDO ADMINISTRADOR</p>
+		  <p th:case='null' class="navbar-brand">BIENVENIDO USUARIO</p>
+	</div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">USUARIO <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/denuncia/cargar" th:if="${usuario.rol} != 'Administrador'" class="onhover-dropdown p-0">Registrar Denuncia</a></li>
+          <li><a href="/denuncia/lista" th:if="${usuario.rol} != null">Listar denuncias</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/principal"><span class="glyphicon glyphicon-log-in"></span> SALIR</a></li>
+    </ul>
+  </div>
+</nav>
+			<img th:src="@{/imagenes/fondo.jpg}">
+			<div class="contenedor">
+				<h2>Bienvenido a la  Pagina Web de Denuncia Digital </h2>
+			</section>
+
+			<br><br><hr size="10" width="1895"><br><br>
+		<section id="bienvenidos">
+			<h3>Registro de Denuncias por Web</h3><br><br>
+			<div th:switch="${usuario.rol}"> 
+		  <p th:case="'Administrador'">ADMINISTRADOR</p>
+		  <p th:case='null'>USUARIO</p>
+	</div>
+			<p>Estimado Usuario:<br>
+
+Esta pagina pone en su conocimiento los siguientes puntos que debe considerar antes de registrar su denuncia:<br><br>
+
+
+* Ser mayor de edad<br><br>
+* Describir los hechos en forma clara y coherente<br><br>
+* Identificar el lugar donde ocurrieron los hechos<br><br>
+* Indicar información concreta que permita su verificación
+</p>
+
+		</section>
+<br><br><hr size="10" width="1895"><br><br><br><br>
+		<section id="blog">
+			<h4>¿Qué tipos de denuncias puedo realizar?</h4><br><br><br>
+			 
+			<div class="contenedor">
+				<article>
+					<img th:src="@{/imagenes/maltrato.png}">
+					<h5>MALTRATO INFANTIL</h5>
+				</article>
+				<article>
+					<img th:src="@{/imagenes/acoso.jpg}">
+					<h5>ACOSO SEXUAL</h5>
+				</article>
+				<article>
+					<img th:src="@{/imagenes/violenciaa.jpg}">
+					<h5>VIOLENCIA FAMILIAR</h5>
+				</article>
+			</div>
+		</section>
+		<br><br><hr size="10" width="1895"><br><br>
+
+		<section id="carta">
+			<h1>¿Cómo hago una denuncia?</h1>
+			<div id="partetexto">
+				<p>
+				PASO 1:<br>
+
+				Seleccionar al lado derecho de la pantalla la opción “ingresar una denuncia”.<br><br>
+
+				PASO 2:<br>
+
+				En la pantalla siguiente usted deberá seleccionar la celda en la que acepta los términos y condiciones de uso y luego hacer clic en la celda “continuar”.<br><br>
+
+				PASO 3:<br>
+
+				En la tercera pantalla usted decidirá si la denuncia la formulará de manera identificada, para lo cual deberá llenar los datos que se solicitan.Cabe señalar que, debido a la legislación actual y al procedimiento existente frente a estos casos, el usuario deberá identificarse para poder realizar una denuncia relativa a situaciones de acoso laboral o sexual.<br><br>
+
+				PASO 4:<br>
+
+				A continuación debe seleccionar la opción que mejor se relaciona con su denuncia de acuerdo a la descripción y luego hacer click en continuar.<br><br>
+
+				PASO 5:<br>
+
+				Ya ingresados y revisados los datos correspondientes haga click en la celda continuar y de esta manera se desplegará la pantalla de finalización del proceso de denuncia.
+				</p>
+			</div>
+
+			<div id="parteimagen">
+				<div id="imagenformulario">
+				<img width="100%" height="100%" th:src="@{/imagenes/denuncia.jpg}">
+				</div>
+				<div id="imagenenviar">
+				<a href="facebook.com"><h6>¡Ingresar una denuncia!</h6></a>
+				</div>
+			</div>
+				
+			
+			</section>
+			
+			<br><br><hr size="10" width="1895"><br><br>
+
+			<section id="cuerpoprincipal">
+				<h1>Momentos Especiales...</h1>
+
+				<div id="cuerpo1">
+					
+					<div id="imagen1">
+						<img width="100%" height="100%" th:src="@{/imagenes/notecalles.jpg}">
+					</div>
+					<div id="texto1">
+						<h2>¿Cómo puedo saber si mi denuncia será tomada en cuenta?</h2><br>
+						<p>La idea básica de la implementación de este sistema de denuncias es dar cabida a todas las inquietudes de quienes formamos parte de esta entidad pública ya que el objetivo primordial es contribuir a mejorar el clima laboral de cada servicio y evitar que se produzcan hechos que van en contra de las buenas prácticas establecidas por el Ministerio.</p>
+					</div>
+				</div>
+
+				<div id="cuerpo2">
+					<div id="texto2">
+						<h2>¿Se garantiza la confidencialidad de las denuncias presentadas y de quienes las realizan?</h2><br>
+						<p>La información que se entregue en cada denuncia se maneja exclusivamente entre el denunciante, el Comité de Ética y el Coordinador de Integridad. Además cuando se ingresa una denuncia, el sistema entrega un identificador y una clave alfanumérica única, que solo es conocida por el denunciante y debe conservarla para hacer consultas y seguimiento al estado en que se encuentra el caso presentado.</p>
+					</div>
+					<div id="imagen2">
+						<img width="100%" height="100%" th:src="@{/imagenes/peganniño.jpg}">
+					</div>
+					
+				</div>
+
+				<div id="cuerpo3">
+					
+					<div id="imagen3">
+						<img width="100%" height="100%" th:src="@{/imagenes/abusosexual.jpg}">
+					</div>
+					<div id="texto3">
+						<h2>¿Se puede realizar una denuncia cuando solo hay sospechas de algo irregular?</h2><br>
+						<p>Si existen sospechas de algún procedimiento o suceso que se esté desarrollando y que atente contra los valores del Ministerio debe ser denunciado igualmente teniendo en cuenta que la falta de elementos probatorios dificultará el estudio del caso.</p>
+					</div>
+					
+				</div>
+
+				<div id="cuerpo4">
+					<div id="texto4">
+						<h2>¿Existe alguna garantía de que no sufriré represalias al realizar alguna denuncia?</h2><br>
+						<p>La confidencialidad con la que opera el sistema garantiza que los denunciantes no serán sujetos de represalias ya que la finalidad es investigar los casos que se presenten sin vulnerar la identidad de los denunciantes.</p>
+					</div>
+					<div id="imagen4">
+						<img width="100%" height="100%" th:src="@{/imagenes/noabuso.jpg}">
+					</div>
+					
+				</div>
+			</section>
+			<hr size="10" width="1895">
+
+
+		
+<hr size="10" width="1895"><br><br>
+
+		<section id="info">
+			<h1>Unidos por su Bienestar</h1><br>
+			<div class="contenedor">
+				<div class="info-pet">
+					<img th:src="@{/imagenes/ministerio.jpg}"><br><br>
+					<p>Ministerio de la Mujer</p>
+				</div>
+				<div class="info-pet">
+					<img th:src="@{/imagenes/policia.png}"><br><br>
+					<p>Policia Nacional del Perú</p>
+				</div>
+				<div class="info-pet">
+					<img th:src="@{/imagenes/defensorio.jpg}"><br><br>
+					<p>Defensoria</p>
+				</div>
+				<div class="info-pet">
+					<img th:src="@{/imagenes/facebook.png}"><br><br>
+					<p>FacebookDenuncias</p>
+				</div>
+			</div>
+			</section>
+			<br><br><hr size="10" width="1895"><br>
+
+		
+
+			<section id="derechos">
+				<p>© Todos los derechos reservados, Copyright 2022</p>
+			</section>
+
+	</main>
+
+
+<a href="PaginaWeb.html"></a>	
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "6aba47b3-17c8-48ba-b79d-2a46dd3a1de3", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "406ac71e-07c7-4609-8b73-3c6b5dd79810", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Página Denuncia</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" th:href="@{/css/reset.css}">
+        <link rel="stylesheet" th:href="@{/css/simplegrid.css}">
+        <link rel="stylesheet" th:href="@{/css/icomoon.css}">
+        <link rel="stylesheet" th:href="@{/css/lightcase.css}">
+        <link rel="stylesheet" th:href="@{/js/owl-carousel/owl.carousel.css}" />
+        <link rel="stylesheet" th:href="@{/js/owl-carousel/owl.theme.css}" />
+        <link rel="stylesheet" th:href="@{/js/owl-carousel/owl.transitions.css}" />
+        <link rel="stylesheet" th:href="@{/style.css}">
+
+        <!-- Google Fonts -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+		 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+           <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+           <!--[if lt IE 9]>
+             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+           <![endif]-->
+        </head>
+        <body id="Home">
+            <!-- Header -->
+            <header id="top-header" class="header-home">
+                <div class="grid">
+                    <div class="col-1-1">
+                        <div class="content">
+                            <a style="font-size: 40px" href="#" >Denuncia</a>
+                            <nav class="navigation">
+                                <input type="checkbox" id="nav-button">
+                                <label for="nav-button" onclick></label>
+                                <ul style="font-size: 19px" class="nav-container">
+                                    <li><a href="#Home" class="current">Home</a></li>
+                                    <li><a href="#Pasos">Pasos</a></li>
+                                    <li><a href="#Preguntas">Preguntas</a></li>
+                                    <li><a href="#Tipos">Tipos</a></li>
+                                    <li><a href="#Ubicacion">Ubicacion</a></li>
+                                    <li><a href="#Nosotros">Nosotros</a></li>
+                                    <li><a href="/login/cargar"><span class="bi bi-person-circle"></span> Sign Up</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- Parallax Section -->
+            <div class="parallax-section parallax1">
+                <div class="grid grid-pad">
+                    <div class="col-1-1">
+                         <div class="content content-header" >
+                            <h2>Bienvenido!</h2>
+                            <h3>Esta pagina pone en su conocimiento los siguientes puntos que debe considerar antes de registrar su denuncia:</h3>
+                            <p>- Ser mayor de edad</p>
+                            <p>- Describir los hechos en forma clara y coherente</p>
+                            <p>- Identificar el lugar donde ocurrieron los hechos</p>
+                            <p>- Indicar información concreta que permita su verificación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Parallax Section -->
+
+            <!-- CurveUp -->
+            <svg class="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+            </svg>
+
+            <!-- Services Section -->
+            <div class="wrap services-wrap" id="Pasos">
+                <section class="grid grid-pad services">
+                    <h2>¿Cómo puedo hacer una denuncia?</h2>
+                    <div class="col-1-4 service-box service-1" >
+                        <div class="content">
+                            <div class="service-icon">
+                                <i class="circle-icon bi bi-cursor"></i>
+                            </div>
+                            <div class="service-entry">
+                                <h3>Paso 1</h3>
+                                <p>Logueate y selecciona en el menu principal la opcion "Denuncia."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-4 service-box service-2" >
+                        <div class="content">
+                            <div class="service-icon">
+                                <i class="circle-icon bi bi-clipboard-check"></i>
+                            </div>
+                            <div class="service-entry">
+                                <h3>Paso 2</h3>
+                                <p> Registrar correctamente tus datos personales y los datos necesarios para poder realizar tu denuncia correctamente.</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-4 service-box service-3">
+                        <div class="content">
+                            <div class="service-icon">
+                                <i class="circle-icon bi bi-check2-square"></i>
+                            </div>
+                            <div class="service-entry">
+                                <h3>Paso 3</h3>
+                                <p> Debe esperar que su denuncia sea verificada y enviada correctamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-4 service-box service-4" >
+                        <div class="content">
+                            <div class="service-icon">
+                                <i class="circle-icon bi bi-x-circle"></i>
+                            </div>
+                            <div class="service-entry">
+                                <h3>Paso 4</h3>
+                                <p> Espere a ser contactada por nuestros trabajadores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End Services Section -->
+            
+            <!-- CurveDown -->
+            <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+            </svg>
+
+            <!-- Work Section -->
+            <div class="wrap grey recent-wrap" id="Preguntas">
+               
+            </div>
+            <!-- End Work Section -->
+
+            <!-- CurveUp -->
+            <svg class="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+            </svg>
+			
+              <!-- Quotes Section -->
+            <div class="wrap services-wrap" >
+                <section class="grid grid-pad">
+                    <div class="col-1-1 service-box cl-client-carousel-container">
+                        <div class="content">
+                        <h2>Preguntas Frecuentes</h2>
+                            <div class="cl-client-carousel">
+                                
+                                <div class="item client-carousel-item"><!-- Start of item -->
+                                <div class="quotes-icon">
+                                    <i class="bi bi-patch-question-fill"></i>
+                                </div>
+                                <h3> ¿Cómo puedo saber si mi denuncia será tomada en cuenta?</h3>
+                                <p>La idea básica de la implementación de este sistema de denuncias es dar cabida a todas las inquietudes de quienes formamos parte de esta entidad pública ya que el objetivo primordial es contribuir a mejorar el clima laboral de cada servicio y evitar que se produzcan hechos que van en contra de las buenas prácticas establecidas por el Ministerio.</p>
+                                </div><!-- End of item -->
+                                
+                                <div class="item client-carousel-item"><!-- Start of item -->
+                                <div class="quotes-icon">
+                                    <i class="bi bi-patch-question-fill"></i>
+                                </div>
+                                <h3>¿Se garantiza la confidencialidad de las denuncias presentadas y de quienes las realizan?</h3>
+                                <p>La información que se entregue en cada denuncia se maneja exclusivamente entre el denunciante, el Comité de Ética y el Coordinador de Integridad. Además cuando se ingresa una denuncia, el sistema entrega un identificador y una clave alfanumérica única, que solo es conocida por el denunciante y debe conservarla para hacer consultas y seguimiento al estado en que se encuentra el caso presentado.</p>
+                                </div><!-- End of item -->
+                                <div class="item client-carousel-item"><!-- Start of item -->
+                                <div class="quotes-icon">
+                                    <i class="bi bi-patch-question-fill"></i>
+                                </div>
+                                <h3>¿Se puede realizar una denuncia cuando solo hay sospechas de algo irregular?</h3>
+                                <p>Si existen sospechas de algún procedimiento o suceso que se esté desarrollando y que atente contra los valores del Ministerio debe ser denunciado igualmente teniendo en cuenta que la falta de elementos probatorios dificultará el estudio del caso.</p>
+                                </div><!-- End of item -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End Quotes Section -->
+
+             <!-- CurveDown -->
+            <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+            </svg>
+
+            <!-- Blog Section -->
+            <div class="wrap blog-grid grey" id="Tipos">
+                <div class="grid grid-pad">
+                    <div class="content" >
+                        <h2>Tipos de Denuncias</h2>
+                        <div class="col-1-2" >
+                            <article class="post-wrap">
+                                <div class="post-img">
+                                    <a href="#0"><img src="imagenes/malfisi.jpg" alt="" height="320"></a>
+                                </div>
+                                <div class="post">
+                                    <h2 class="entry-title"><a href="#0">Maltrato Físico</a></h2>
+                                    <div class="post-meta">
+                                    </div>
+                                    <p>El maltrato físico incluye acciones como golpear, empujar, abofetear, patear, pellizcar, asfixiar y estrangular. Es posible que el maltrato físico provenga de un conocido o de un amigo cercano o un familiar.
+                                    </p>
+                                	<div class="post-meta">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-1-2" >
+                            <article class="post-wrap">
+                                <div class="post-img">
+                                    <a href="#0"><img src="imagenes/malemo.jpg" alt="" height="320"></a>
+                                </div>
+                                <div class="post">
+                                    <h2 class="entry-title"><a href="#0">Maltrato Emocional</a></h2>
+                                    <div class="post-meta">
+                                    </div>
+                                    <p>Es cualquier acto de naturaleza verbal o no verbal que provoca intencionalmente en la víctima una reacción de ansiedad, temor o miedo, tal como las intimidaciones y las amenazas.
+                                    </p>
+                                    <div class="post-meta">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-1-2" >
+                            <article class="post-wrap">
+                                <div class="post-img">
+                                    <a href="#0"><img src="imagenes/malinfa.jpg" alt="" height="320"></a>
+                                </div>
+                                <div class="post">
+                                    <h2 class="entry-title"><a href="#0">Maltrato Infantil</a></h2>
+                                    <div class="post-meta">
+                                    </div>
+                                    <p>El maltrato infantil se define como los abusos y la desatención de que son objeto los menores de 18 años, e incluye todos los tipos de maltrato físico o psicológico, abuso sexual, etc.
+                                    </p>
+                                  <div class="post-meta">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-1-2" >
+                            <article class="post-wrap">
+                                <div class="post-img">
+                                    <a href="#0"><img src="imagenes/malsex.jpg" alt="" height="320"></a>
+                                </div>
+                                <div class="post">
+                                    <h2 class="entry-title"><a href="#0">Maltrato Sexual</a></h2>
+                                    <div class="post-meta">
+                                    </div>
+                                    <p>Por lo general, un ataque sexual ocurre cuando alguien toca cualquier parte del cuerpo de otra persona sin su consentimiento con fines sexuales, incluso si el contacto es a través de la ropa.
+                                    </p>
+                                   <div class="post-meta">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End Blog Section -->
+
+            <!-- CurveUp -->
+            <svg class="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+            </svg>
+            
+          
+                <!-- CurveDown -->
+                <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+                </svg>
+
+
+                <!-- Team Section -->
+                <div class="wrap team-wrap grey" id="Ubicacion">
+                    <div class="grid grid-pad">
+                        <div class="content" >
+                            <h2>Unidos por su Bienestar</h2>
+                            <div class="col-1-4" >
+                                <div class="content staff-content">
+                                    <div class="recent-work staff-img">
+                                        <div class="img-wrap staff-img">
+                                            <img src="imagenes/minmu.png" alt="" height="150">
+                                            <div class="team-social">
+                                                <a class="sl-fb" href="https://www.gob.pe/institucion/mimp/institucional" target="_blank"><i class="bi bi-browser-chrome"></i></a>
+                                                <a class="sl-tw" href="https://www.facebook.com/MimpPeru" target="_blank"><i class="bi bi-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="work-info staff-info">
+                                            <h5>Ministerio de la mujer</h5>
+                                            <h5>y Poblaciones Vulnerables</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-4" >
+                                <div class="content staff-content">
+                                    <div class="recent-work staff-img">
+                                        <div class="img-wrap staff-img">
+                                            <img src="imagenes/poli.png" alt="" height="150">
+                                            <div class="team-social">
+                                                <a class="sl-fb" href="https://www.policia.gob.pe/" target="_blank"><i class="bi bi-browser-chrome"></i></a>
+                                                <a class="sl-tw" href="https://www.facebook.com/Policia/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="work-info staff-info">
+                                            <h5>Policia Nacional del Peru</h5>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-1-4" >
+                                <div class="content staff-content">
+                                    <div class="recent-work staff-img">
+                                        <div class="img-wrap staff-img">
+                                            <img src="imagenes/defpue.jpg" alt="" height="150">
+                                            <div class="team-social">
+                                                <a class="sl-fb" href="https://www.defensoria.gob.pe/" target="_blank"><i class="bi bi-browser-chrome" ></i></a>
+                                                <a class="sl-tw" href="https://www.facebook.com/defensoriaperu/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="work-info staff-info">
+                                            <h5>Defensoria del Pueblo</h5>
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-1-4" >
+                                <div class="content staff-content">
+                                    <div class="recent-work staff-img">
+                                        <div class="img-wrap staff-img">
+                                            <img src="imagenes/mindef.jpg" alt="" height="150">
+                                            <div class="team-social">
+                                                <a class="sl-fb" href="https://www.gob.pe/institucion/mindef/institucional/" target="_blank"><i class="bi bi-browser-chrome" ></i></a>
+                                                <a class="sl-tw" href="https://www.facebook.com/ministeriodedefensa/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="work-info staff-info">
+                                            <h5>Ministerio de Defensa</h5>
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Team Section -->
+
+             
+               
+                <!-- End Clients Logos Section -->
+
+                <!-- CurveDown -->
+                <svg class="curveDownColor curveMapUp" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+                </svg>
+                
+                <!-- Parallax Section -->
+                <div class="map">                    
+                    <div class="wrap">
+                        <section id="cd-google-map">
+                            <div> <iframe id="google-container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.918347091912!2d-77.03160352450595!3d-12.049138954176952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c9c65b0399%3A0xe5a75d3b680c684f!2sMinisterio%20de%20la%20Mujer%20y%20Poblaciones%20Vulnerables!5e0!3m2!1ses!2spe!4v1669865319341!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                            <div id="cd-zoom-in"></div>
+                            <div id="cd-zoom-out"></div>
+                        </section>
+                    </div>
+                </div>
+                <!-- End Parallax Section -->
+
+                <!-- CurveUp -->
+                <svg class="curveUpColor curveMapDown" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+                </svg>
+
+            
+                <div class="wrap contact" id="Nosotros">
+                </div>
+              
+
+                <footer class="wrap">
+                    <div class="grid grid-pad" >
+                        <div class="col-1-4">
+                            <div class="content">
+                                <div class="footer-widget">
+                                    <h3></h3> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-4">
+                            <div class="content">
+                                <div class="footer-widget">
+                                    <h3>Acerca de Nosotros</h3>
+                                    <div class="textwidget">
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p><br>
+                                        <p>Et dolore magna aliquyam erat sed diam voluptua.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-4" >
+                            <div class="content">
+                                <div class="footer-widget">
+                                    <h3>Mas Información</h3>
+                                    <div class="textwidget">
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
+                                        <br>
+                                        <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="social-footer">
+                        <div class="grid grid-pad">
+                            <div class="col-1-1" >
+                                <div class="content">
+                                    <div class="social-set">
+                                        <a  href="#"><i class="icon-facebook"></i></a>
+                                        <a  href="#"><i class="icon-twitter"></i></a>
+                                        <a  href="#"><i class="icon-linkedin2"></i></a>
+                                    </div>
+                                    <p class="source-org copyright">© 2022 | Proyecto PI Cibertec
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+
+                <div class="loader-overlay">
+                    <div class="loader">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <!-- JS -->
+                <script src="js/jquery.js"></script>
+                <script src="js/main.js"></script>
+                <script src="js/mixitup.js"></script>
+                <script src="js/smoothscroll.js"></script>
+                <script src="js/jquery.nav.js"></script>
+                <script src="js/owl-carousel/owl.carousel.min.js"></script>
+                <script src="https://maps.googleapis.com/maps/api/js"></script>
+                <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+                <script src="js/jquery.counterup.min.js"></script>
+                <script src="js/lightcase.min.js"></script>
+            </body>
+        </html>

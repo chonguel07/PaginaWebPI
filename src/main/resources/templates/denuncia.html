@@ -1,0 +1,231 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link th:href = "@{/css/denuncia.css}" rel="stylesheet" >
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/js/mdb.min.js" integrity="sha512-XFd1m0eHgU1F05yOmuzEklFHtiacLVbtdBufAyZwFR0zfcq7vc6iJuxerGPyVFOXlPGgM8Uhem9gwzMI8SJ5uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css" integrity="sha512-hj9rznBPdFg9A4fACbJcp4ttzdinMDtPrtZ3gBD11DiY3O1xJfn0r1U5so/J0zwfGOzq9teIaH5rFmjFAFw8SA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.lite.min.css" integrity="sha512-Eu5EEZpsrO6niYlnhT+ITom/YVGoIZGEsbAvZ+gUJsO3Xaq9+hX4vZnbecMn/Cq5KOdmNOdehu/U80111W9xsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">	
+  
+  <link rel="stylesheet" type="text/css" th:href="@{../style.css}">
+        <link rel="stylesheet" th:href="@{../css/reset.css}">
+        <link rel="stylesheet" th:href="@{../css/simplegrid.css}">
+        <link rel="stylesheet" th:href="@{../css/icomoon.css}">
+        <link rel="stylesheet" th:href="@{../css/lightcase.css}">
+        <link rel="stylesheet" th:href="@{../js/owl-carousel/owl.carousel.css}" />
+        <link rel="stylesheet" th:href="@{../js/owl-carousel/owl.theme.css}" />
+        <link rel="stylesheet" th:href="@{../js/owl-carousel/owl.transitions.css}" />
+        <link rel="stylesheet" th:href="@{../style.css}">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap.min.js"></script> 
+
+	<title>Registra Denuncia</title>
+
+	
+</head>
+<body>
+<header id="top-header" class="header-home" style="background-color: #3E3E3E">
+                <div class="grid">
+                    <div class="col-1-1">
+                        <div class="content">
+                            <a style="font-size: 40px" href="#" >Denuncia</a>
+                            <nav class="navigation">
+                                <input type="checkbox" id="nav-button">
+                                <label for="nav-button" onclick></label>
+                                <ul class="nav-container">
+                                  
+                                    <li style="font-size: 30px"><a href="/pagi"><span class="bi bi-box-arrow-in-left"></span> SALIR</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+<form action="/denuncia/grabar" method="post" th:object="${denuncia}">
+<section class="h-100 h-custom gradient-custom-2">
+<br><br><br>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4;">Ingresa tu informacion</h3>
+
+                 
+                    <div class="mb-4 pb-2">
+                    <div class="form-outline">
+                      <input th:field="*{nombres}" type="text" id="form3Examplev4" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Examplev4">Nombres Completos</label>
+                    </div>
+                  </div>
+                  
+               <div class="row">
+                    <div class="col-md-5 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input th:field="*{edad}" type="text" id="form3Examplea4" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplea4">Edad</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input th:field="*{dni}" type="text" id="form3Examplea5" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplea5">DNI</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+			<div class="row">
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                      <div class="form-outline">
+                        <input th:field="*{telefono}" type="text" id="form3Examplev5" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplev5">Telefono</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+					<label class="form-label" for="form3Examplev5">Genero</label>
+                      <select th:field="*{genero}" class="select">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                      </select>
+
+                    </div>
+                  </div>
+                  
+ <br>
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                      <div class="form-outline">
+                        <input th:field="*{domicilio}" type="text" id="form3Examplev5" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplev5">Domicilio</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+ 					<label class="form-label" for="form3Examplev4">Tipo</label>
+                      <select th:field="*{tipo}" class="select">
+                        <option value="Físico">Físico</option>
+                        <option value="Psicológico">Psicológico</option>
+                        <option value="Sexual">Sexual</option>
+                        <option value="Emocional">Emocional</option>
+                        <option value="Patrimonial">Patrimonial</option>
+                      </select>
+
+                    </div>
+                  </div>
+                  <br>
+<div class="mb-4 pb-2">
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 bg-indigo text-white">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5">Informacion del denunciante</h3>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                      <input th:field="*{agresor}" type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Examplea2">Nombres del agresor/a</label>
+                    </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                      <input th:field="*{telefonoagresor}" type="text" id="form3Examplea3" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Examplea3">Telefono</label>
+                    </div>
+                  </div>
+                  
+                    <div class="mb-4 pb-2">
+					<label class="form-label" for="form3Examplev5">Genero</label>
+                      <select th:field="*{sexoagresor}" class="select">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                      </select>
+
+                    </div>
+<h3 class="fw-normal mb-5">Informacion del lugar de los hechos</h3>
+                  <div class="row">
+                    <div class="col-md-5 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input th:field="*{localizacion}" type="text" id="form3Examplea4" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplea4">Localizacion</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input th:field="*{calle}" type="text" id="form3Examplea5" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplea5">Direccion de la calle</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                      <input th:field="*{fecha}" type="date" id="form3Examplea6" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Examplea6">Fecha</label>
+                    </div>
+                  </div>
+
+                
+
+                  <div class="mb-4">
+                    <div class="form-outline form-white">
+                      <input th:field="*{hechos}" type="text" id="form3Examplea9" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Examplea9">Descripción de los hechos</label>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-light btn-lg"
+                    data-mdb-ripple-color="dark">Registrar</button>
+                    <a href="javascript:history.back()" type="submit" class="btn btn-light btn-lg"
+                    data-mdb-ripple-color="dark">Volver</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ </form>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+
+</html>
