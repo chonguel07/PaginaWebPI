@@ -83,13 +83,6 @@ public class UsuarioController {
 	
 	
 	@GetMapping("/principal")
-	public String newpag() {
-		return "index";
-	}
-	
-	
-	
-	@GetMapping("/principal")
 	public String abrirLogin() {
 		return "principal";
 	}
